@@ -8,7 +8,7 @@ with DAG(
     dag_id="dags_python_with_op_kwargs",
     schedule="30 6 * * *",
     start_date=pendulum.datetime(2024, 2, 1, tz="Asia/Seoul"),
-    catch_up=False,
+    catchup=False,
 ) as dag:
     regist_t2 = PythonOperator(
         task_id="regist_t2",
