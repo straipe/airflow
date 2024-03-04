@@ -12,7 +12,7 @@ with DAG(
     var_value = Variable.get("sample_key")
 
     bash_var_1 = BashOperator(
-        task_id="bash_var_1", bsah_command=f"echo variable:{var_value}"
+        task_id="bash_var_1", bash_command=f"echo variable:{var_value}"
     )
 
     bash_var_2 = BashOperator(
