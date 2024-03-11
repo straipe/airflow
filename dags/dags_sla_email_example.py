@@ -12,7 +12,7 @@ with DAG(
     start_date=pendulum.datetime(2024, 3, 1, tz="Asia/Seoul"),
     schedule="*/10 * * * *",
     catchup=False,
-    default_args={"sla": timedelta(seceonds=70), "email": email_lst},
+    default_args={"sla": timedelta(seconds=70), "email": email_lst},
 ) as dag:
     task_slp_30s_sla_70s = BashOperator(
         task_id="task_slp_30s_sla_70s", bash_command="sleep 30"
